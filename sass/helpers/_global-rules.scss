@@ -1,0 +1,87 @@
+@use "colors" as c;
+* {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 576px) {
+  *:focus {
+    outline: none;
+  }
+}
+ul {
+  list-style: none;
+}
+input {
+  all: unset;
+  display: block;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: "Work sans", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(c.$clr-primary, 0.7);
+  border-radius: 10px;
+  border: 2px dashed white;
+  &:hover {
+    background-color: c.$clr-primary;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(c.$clr-secondry, 0.2);
+}
+// Containers
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* Medium */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+/* Large */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+/* X-Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* XX-Large */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
